@@ -1,3 +1,15 @@
+
+
+
+var example = ["Example", "http://google.com", "icons/Google.svg"]
+var example_store = ["Google Play","https://play.google.com/store/apps/details?id=", "icons/google-play.png"]
+
+var im = ["Im", "http://google.com", "icons/Google.svg"]
+
+
+
+
+
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -9,16 +21,12 @@ function include(url) {
   document.getElementsByTagName('head')[0].appendChild(script);
 }
 
-var example = ["Example", "http://samsung.com", "icons/Samsung_Logo.svg"]
-var example1 = ["Example", "http://samsung.com", "icons/Samsung_Logo.svg"]
-
-var stores = ["icons/google-play.png", "icons/app-store.svg"]
-var gp = "https://play.google.com/store/apps/details?id=";
+var gp = ["Google Play","https://play.google.com/store/apps/details?id=", "icons/google-play.png"];
 var as;
-
 //ba(company_name, width); встроеные компании
 //bacstm(company_name, logo, site, width); добавление своей компании
 //bastrore(store_name[gp, as,], product, width) магазины приложений
+//bastore_cstm(store_title, root_link, product_link, logo, width)
 
 const ba = (s, w)=>{
     var rndm = getRandomInt(1, 1000);
@@ -63,12 +71,7 @@ const bastore = (s, p, w)=>{
   var rndm = getRandomInt(1, 1000);
   let img = document.createElement('img');
   img.className = rndm;
-  if (s == gp) {
-    img.src = stores[0];
-  }
-  else if (s == as) {
-    img.src = stores[1];
-  }
+  img.src = s[2];
   img.alt = "";
   if (w == null) {
     w = "250px"
@@ -76,13 +79,27 @@ const bastore = (s, p, w)=>{
   img.style.width = w;
 
   let a = document.createElement('a');
-  if (s == gp) {
-    a.href = gp + p
+  a.href = s[1] + p;
+  a.title = s[0] + " (" + a.href + ")";
+  a.append(img);
+
+  document.body.append(a);
+}
+
+const bastore_cstm = (s, r, p, l, w)=>{
+  var rndm = getRandomInt(1, 1000);
+  let img = document.createElement('img');
+  img.className = rndm;
+  img.src = s[2];
+  img.alt = "";
+  if (w == null) {
+    w = "250px"
   }
-  else if (s == as) {
-    a.href = p
-  }
-  a.title = s + " (" + a.href + ")";
+  img.style.width = w;
+
+  let a = document.createElement('a');
+  a.href = s[1] + p;
+  a.title = s[0] + " (" + a.href + ")";
   a.append(img);
 
   document.body.append(a);
