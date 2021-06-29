@@ -19,12 +19,7 @@ function include(url) {
   document.getElementsByTagName('head')[0].appendChild(script);
 }
 
-var gp = ["Google Play","https://play.google.com/store/apps/details?id=", "icons/google-play.png"];
-var as;
-//ba(company_name, width); встроеные компании
-//bacstm(company_name, logo, site, width); добавление своей компании
-//bastrore(store_name[gp, as,], product, width) магазины приложений
-//bastore_cstm(store_title, root_link, product_link, logo, width)
+
 
 const ba = (s, w)=>{
     var rndm = getRandomInt(1, 1000);
