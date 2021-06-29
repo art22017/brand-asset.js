@@ -4,8 +4,6 @@
 var example = ["Example", "http://google.com", "icons/Google.svg"]
 var example_store = ["Google Play","https://play.google.com/store/apps/details?id=", "icons/google-play.png"]
 
-var im = ["Im", "http://google.com", "icons/Google.svg"]
-
 
 
 
@@ -90,7 +88,7 @@ const bastore_cstm = (s, r, p, l, w)=>{
   var rndm = getRandomInt(1, 1000);
   let img = document.createElement('img');
   img.className = rndm;
-  img.src = s[2];
+  img.src = l;
   img.alt = "";
   if (w == null) {
     w = "250px"
@@ -98,8 +96,8 @@ const bastore_cstm = (s, r, p, l, w)=>{
   img.style.width = w;
 
   let a = document.createElement('a');
-  a.href = s[1] + p;
-  a.title = s[0] + " (" + a.href + ")";
+  a.href = r + p;
+  a.title = s + " (" + a.href + ")";
   a.append(img);
 
   document.body.append(a);
