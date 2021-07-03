@@ -1,7 +1,8 @@
 
 
 
-var example = ["http://google.com", "g.svg"]
+//example: <script type="text/javascript" src="brand-asset.js"></script> in <head>
+//<script type="text/javascript>ba(image_path, website_link, image_width (optionaly, height set automatic))</script>
 
 
 
