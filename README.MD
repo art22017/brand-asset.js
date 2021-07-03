@@ -1,6 +1,6 @@
 ###### Documentation
 
-### Brand-asset.js is JS-library for simple making images-links for logotypes
+### Brand-asset.js is JS-library for simple making images-links with logotypes
 
 Examples:
 
