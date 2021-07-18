@@ -6,7 +6,7 @@ Examples:
 
 ```html
 <head>
-  <script type="text/javascript" src="https://art-develop.github.io/brand-asset.js"></script>
+  <script type="text/javascript" src="https://www.artdevelop.ga/ba.js"></script>
 </head>
 <body>
   <script type="text/javascript">
