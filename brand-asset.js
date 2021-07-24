@@ -74,7 +74,7 @@ const bastore = (store, product, width)=>{
         a.href = "https://play.google.com/store/apps/details?id=" + product;
         break;
       case "app_store":
-        a.href = "https://apps.apple.com/ru/app/" + product;
+        a.href = product;
         break;
       default:
         a.href = product;
