@@ -16,30 +16,33 @@ function getRandomInt(min, max) {
 
 //BA
 const ba = (image, link, width)=>{
-    var rndm = getRandomInt(1, 1000);
-    let img = document.createElement('img');
-    img.className = "ba-" + rndm;
-    img.src = image;
-    if (width == null) {
-      width = "250px"
-    }
-    img.style.width = width;
+  //img
+  var rndm = getRandomInt(1, 1000);
+  let img = document.createElement('img');
+  img.className = "ba-" + rndm;
+  img.src = image;
+  if (width == null) {
+    width = "250px"
+  }
+  img.style.width = width;
 
-    if(link == "-" || link == "") {
-      document.body.append(img);
-    }
-    else {
-      let a = document.createElement('a');
-      a.href = link;
-      a.title = "Brand-asset.js " + "(" + link + ")";
-      a.append(img);
+  if(link == "-" || link == "") {
+    document.body.append(img);
+  }
+  //a
+  else {
+    let a = document.createElement('a');
+    a.href = link;
+    a.title = "Brand-asset.js " + "(" + link + ")";
+    a.append(img);
 
-      document.body.append(a);
-    }
+    document.body.append(a);
+  }
 }
 
 //BASTORE
 const bastore = (store, product, width)=>{
+  //img
   var rndm = getRandomInt(1, 1000);
   let img = document.createElement('img');
   img.className = "bastore-" + rndm;
@@ -50,9 +53,18 @@ const bastore = (store, product, width)=>{
       img.src = "https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg";
     default:
       img.src = store;
-    
-    if (width == null) {
-      width = "250px"
+  }
+
+  if (width == null) {
+    width = "250px"
+  }
+  img.style.width = width;
+
+  if(product == "-" || product == "") {
+    document.body.append(img);
+  }
+  else {
+    //a
     }
   }
 }
