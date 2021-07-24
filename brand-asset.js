@@ -25,10 +25,34 @@ const ba = (image, link, width)=>{
     }
     img.style.width = width;
 
-    let a = document.createElement('a');
-    a.href = link;
-    a.title = "Brand-asset.js " + "(" + link + ")";
-    a.append(img);
+    if(link == "-" || link == "") {
+      document.body.append(img);
+    }
+    else {
+      let a = document.createElement('a');
+      a.href = link;
+      a.title = "Brand-asset.js " + "(" + link + ")";
+      a.append(img);
 
-    document.body.append(a);
+      document.body.append(a);
+    }
+}
+
+//BASTORE
+const bastore = (store, product, width)=>{
+  var rndm = getRandomInt(1, 1000);
+  let img = document.createElement('img');
+  img.className = "bastore-" + rndm;
+  switch(store) {
+    case "google_play":
+      img.src = "https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg";
+    case "app_store":
+      img.src = "https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg";
+    default:
+      img.src = store;
+    
+    if (width == null) {
+      width = "250px"
+    }
+  }
 }
