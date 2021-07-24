@@ -26,7 +26,7 @@ const ba = (image, link, width)=>{
   }
   img.style.width = width;
 
-  if(link == "-" || link == "") {
+  if(link == "-" || link == "" || link == null) {
     document.body.append(img);
   }
   //a
@@ -49,10 +49,13 @@ const bastore = (store, product, width)=>{
   switch(store) {
     case "google_play":
       img.src = "https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg";
+      break;
     case "app_store":
       img.src = "https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg";
+      break;
     default:
       img.src = store;
+      break;
   }
 
   if (width == null) {
@@ -60,11 +63,26 @@ const bastore = (store, product, width)=>{
   }
   img.style.width = width;
 
-  if(product == "-" || product == "") {
+  if(product == "-" || product == "" || product == null) {
     document.body.append(img);
   }
   else {
     //a
+    let a = document.createElement('a');
+    switch (store) {
+      case "google_play":
+        a.href = "https://play.google.com/store/apps/details?id=" + product;
+        break;
+      case "app_store":
+        a.href = "https://apps.apple.com/ru/app/" + product;
+        break;
+      default:
+        a.href = product;
+        break;
     }
+    a.title = "Brand-asset.js " + "(" + a.href + ")";
+    a.append(img);
+
+    document.body.append(a);
   }
 }
