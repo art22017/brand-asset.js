@@ -11,7 +11,7 @@
 ```
 
 #### Commands:
-##### ba(image, link, width)
+### ba(image, link, width)
 Example:
 ```js
 ba("samsung.img", "https://samsung.com", "20vh");
@@ -24,7 +24,7 @@ If you set "" or "-" or don't set this argument, only image setted by default.
 ###### width:
 Optionaly argument, 250px by default. The height is set automatically.
 
-##### bastore(store, product, width)
+### bastore(store, product, width)
 Example:
 ```js
 bastore("google_play", "com.instagram.android", "40px");
