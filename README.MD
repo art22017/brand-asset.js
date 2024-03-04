@@ -11,10 +11,6 @@
 ```
 or download code file
 
-<script type="text/javascript" src="http://best-equations.ru/ba.js/">bastore("google_play", "com.google.android.youtube", "40px");</script>
-
-
-
 #### Commands:
 ### ba(image, link, width)
 Example:
