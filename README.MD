@@ -6,9 +6,10 @@
 
 ```html
 <head>
-  <script type="text/javascript" src="https://www.artdevelop.ga/ba.js"></script>
+  <script type="text/javascript" src="http://best-equations.ru/ba.js/"></script>
 </head>
 ```
+or download code file
 
 #### Commands:
 ### ba(image, link, width)
@@ -35,7 +36,7 @@ If the value is not "app_store" or "google_play", this argument specifies a link
 ###### product:
 Poduct name.
 If the store is "google_play", this argument must be the name of the application package ("com.instagram.android", "com.google.android.youtube").
-If the store is "app_store", this argument should simply be a link to the product in the App Store ("https://apps.apple.com/ru/app/instagram/id389801252", "https://apps.apple.com/ru/app/youtube/id544007664").
+If the store is "app_store", this argument should simply be a link to the product in the App Store ("https://apps.apple.com/ru/app/youtube/id544007664" for example).
 If the store is custom, this argument is just a link to the product.
 ###### width:
 Optionaly argument, 250px by default. The height is set automatically.
