@@ -11,6 +11,10 @@
 ```
 or download code file
 
+<script type="text/javascript" src="http://best-equations.ru/ba.js/">bastore("google_play", "com.google.android.youtube", "40px");</script>
+
+
+
 #### Commands:
 ### ba(image, link, width)
 Example:
@@ -28,14 +32,14 @@ Optionaly argument, 250px by default. The height is set automatically.
 ### bastore(store, product, width)
 Example:
 ```js
-bastore("google_play", "com.instagram.android", "40px");
+bastore("google_play", "com.google.android.youtube", "40px");
 ```
 ###### store:
 Store (App Store ("app_store"), Google Play ("google_play")).
 If the value is not "app_store" or "google_play", this argument specifies a link to a custom store image.
 ###### product:
 Poduct name.
-If the store is "google_play", this argument must be the name of the application package ("com.instagram.android", "com.google.android.youtube").
+If the store is "google_play", this argument must be the name of the application package ("com.google.android.youtube" for example).
 If the store is "app_store", this argument should simply be a link to the product in the App Store ("https://apps.apple.com/ru/app/youtube/id544007664" for example).
 If the store is custom, this argument is just a link to the product.
 ###### width:
